@@ -12,6 +12,7 @@ pages['/'] = require('./lib/IndexPage.js')
 pages['/changePassword'] = require('./lib/ChangePasswordPage.js')(sessions)
 pages['/editProfile'] = require('./lib/EditProfilePage.js')(sessions)
 pages['/open'] = require('./lib/OpenPage.js')(sessions, users)
+pages['/close'] = require('./lib/ClosePage.js')(sessions, users)
 
 http.createServer((req, res) => {
     var parsedUrl = url.parse(req.url, true)
