@@ -9,10 +9,12 @@ var users = Object.create(null)
 
 var pages = Object.create(null)
 pages['/'] = require('./lib/IndexPage.js')
+pages['/addContact'] = require('./lib/AddContactPage.js')(sessions)
 pages['/changePassword'] = require('./lib/ChangePasswordPage.js')(sessions)
+pages['/close'] = require('./lib/ClosePage.js')(sessions, users)
 pages['/editProfile'] = require('./lib/EditProfilePage.js')(sessions)
 pages['/open'] = require('./lib/OpenPage.js')(sessions, users)
-pages['/close'] = require('./lib/ClosePage.js')(sessions, users)
+pages['/removeContact'] = require('./lib/RemoveContactPage.js')(sessions)
 
 http.createServer((req, res) => {
     var parsedUrl = url.parse(req.url, true)
