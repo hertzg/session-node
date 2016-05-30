@@ -18,6 +18,7 @@ pages['/open'] = require('./lib/OpenPage.js')(sessions, users)
 pages['/removeContact'] = require('./lib/RemoveContactPage.js')(sessions)
 
 http.createServer((req, res) => {
+    console.log('HTTP: ' + req.url)
     var parsedUrl = url.parse(req.url, true)
     var page = pages[parsedUrl.pathname]
     if (page === undefined) page = Error404Page
