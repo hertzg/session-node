@@ -5,3 +5,10 @@ exports.accountNode = {
     host: '127.0.0.1',
     port: 7702,
 }
+
+exports.log = {
+    debug: true,
+    error: true,
+    http: true,
+    info: true,
+}

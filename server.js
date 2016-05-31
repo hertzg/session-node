@@ -2,7 +2,8 @@ var http = require('http'),
     url = require('url')
 
 var config = require('./config.js'),
-    Error404Page = require('./lib/Error404Page.js')
+    Error404Page = require('./lib/Error404Page.js'),
+    Log = require('./lib/Log.js')
 
 var sessions = Object.create(null)
 var users = Object.create(null)
@@ -18,7 +19,7 @@ pages['/open'] = require('./lib/OpenPage.js')(sessions, users)
 pages['/removeContact'] = require('./lib/RemoveContactPage.js')(sessions)
 
 http.createServer((req, res) => {
-    console.log('HTTP: ' + req.url)
+    Log.http(req.method + ' ' + req.url)
     var parsedUrl = url.parse(req.url, true)
     var page = pages[parsedUrl.pathname]
     if (page === undefined) page = Error404Page
