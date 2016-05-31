@@ -7,7 +7,6 @@ exports.accountNode = {
 }
 
 exports.log = {
-    debug: true,
     error: true,
     http: true,
     info: true,
