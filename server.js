@@ -17,7 +17,7 @@ pages['/editContact'] = require('./lib/EditContactPage.js')(sessions)
 pages['/editProfile'] = require('./lib/EditProfilePage.js')(sessions)
 pages['/open'] = require('./lib/OpenPage.js')(sessions, users)
 pages['/pullMessages'] = require('./lib/PullMessagesPage.js')(sessions)
-pages['/receiveMessage'] = require('./lib/ReceiveMessagePage.js')(sessions)
+pages['/receiveMessage'] = require('./lib/ReceiveMessagePage.js')(users)
 pages['/removeContact'] = require('./lib/RemoveContactPage.js')(sessions)
 
 http.createServer((req, res) => {
