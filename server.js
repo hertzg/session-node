@@ -20,6 +20,7 @@ pages['/open'] = require('./lib/Page/Open.js')(sessions, users)
 pages['/pullMessages'] = require('./lib/Page/PullMessages.js')(sessions)
 pages['/receiveMessage'] = require('./lib/Page/ReceiveMessage.js')(users)
 pages['/removeContact'] = require('./lib/Page/RemoveContact.js')(sessions)
+pages['/removeRequest'] = require('./lib/Page/RemoveRequest.js')(sessions)
 
 http.createServer((req, res) => {
     Log.http(req.method + ' ' + req.url)
