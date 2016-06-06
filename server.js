@@ -22,6 +22,7 @@ pages['/frontNode/pullMessages'] = require('./lib/Page/FrontNode/PullMessages.js
 pages['/frontNode/removeContact'] = require('./lib/Page/FrontNode/RemoveContact.js')(sessions)
 pages['/frontNode/removeRequest'] = require('./lib/Page/FrontNode/RemoveRequest.js')(sessions)
 pages['/frontNode/sendTextMessage'] = require('./lib/Page/FrontNode/SendTextMessage.js')(sessions)
+pages['/frontNode/signOut'] = require('./lib/Page/FrontNode/SignOut.js')(sessions)
 
 http.createServer((req, res) => {
     Log.http(req.method + ' ' + req.url)
