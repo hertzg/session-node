@@ -21,6 +21,7 @@ pages['/frontNode/overrideContactProfile'] = require('./lib/Page/FrontNode/Overr
 pages['/frontNode/pullMessages'] = require('./lib/Page/FrontNode/PullMessages.js')(sessions)
 pages['/frontNode/removeContact'] = require('./lib/Page/FrontNode/RemoveContact.js')(sessions)
 pages['/frontNode/removeRequest'] = require('./lib/Page/FrontNode/RemoveRequest.js')(sessions)
+pages['/frontNode/sendFileMessage'] = require('./lib/Page/FrontNode/SendFileMessage.js')(sessions)
 pages['/frontNode/sendTextMessage'] = require('./lib/Page/FrontNode/SendTextMessage.js')(sessions)
 pages['/frontNode/signOut'] = require('./lib/Page/FrontNode/SignOut.js')(sessions)
 
