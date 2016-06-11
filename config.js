@@ -6,6 +6,11 @@ exports.accountNode = {
     port: 7300,
 }
 
+exports.fileNode = {
+    host: '127.0.0.1',
+    port: 7500,
+}
+
 exports.log = {
     error: true,
     http: true,
